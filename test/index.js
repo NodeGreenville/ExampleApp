@@ -8,3 +8,12 @@ describe('GET /', function(){
       .expect(200, done);
   });
 });
+
+describe('POST /api/v1/login', function(){
+  it('should respond with a 201', function(done){
+    request(app)
+      .post('/api/v1/login')
+      .send({ username: "Test User" })
+      .expect(201, done);
+  });
+});
